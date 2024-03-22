@@ -31,6 +31,9 @@
   <property name="windowTitle">
    <string>FirstTest</string>
   </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
@@ -41,8 +44,11 @@
       <height>61</height>
      </rect>
     </property>
+    <property name="locale">
+     <locale language="English" country="UnitedStates"/>
+    </property>
     <property name="text">
-     <string>Hello World!</string>
+     <string>Hello World</string>
     </property>
     <property name="default">
      <bool>true</bool>

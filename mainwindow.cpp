@@ -23,6 +23,6 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    QMessageBox::information(this, "FirstTest", "Hello World!", QMessageBox::StandardButton::Ok, QMessageBox::StandardButton::Ok);
+    QMessageBox::information(this, " ", tr("Hello World!"), QMessageBox::StandardButton::Ok, QMessageBox::StandardButton::Ok);
 }
 
