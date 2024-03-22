@@ -42,7 +42,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>click</string>
+     <string>Hello World!</string>
     </property>
     <property name="default">
      <bool>true</bool>
