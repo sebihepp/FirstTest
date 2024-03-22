@@ -11,18 +11,22 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
+find_package(Qt6 REQUIRED COMPONENTS LinguistTools)
 
 set(PROJECT_SOURCES
         main.cpp
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
+        FirstTest_en.ts
+        FirstTest_de.ts
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(FirstTest
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET FirstTest APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
@@ -41,6 +45,8 @@ else()
         )
     endif()
 endif()
+
+qt6_add_translations(FirstTest TS_FILES FirstTest_de.ts FirstTest_en.ts)
 
 target_link_libraries(FirstTest PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 
