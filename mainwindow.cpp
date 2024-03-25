@@ -26,3 +26,9 @@ void MainWindow::on_pushButton_clicked()
     QMessageBox::information(this, " ", tr("Hello World!"), QMessageBox::StandardButton::Ok, QMessageBox::StandardButton::Ok);
 }
 
+
+void MainWindow::on_exitButton_clicked()
+{
+    this->close();
+}
+
